@@ -304,3 +304,29 @@ body {
         margin: 0;
     }
 }
+canvas {
+    max-height: 300px;
+}
+
+#monthSlider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#monthData {
+    margin-bottom: 20px;
+    font-size: 18px;
+    display: flex;
+    gap: 20px;
+}
+
+#redData {
+    color: #c01b1e;
+}
+
+#blueData {
+    color: #143e95;
+}

@@ -9,21 +9,43 @@
 </head>
 <body>
 <header class="header">
-	<div class="header-container">
-		<div class="header-logo">
+	<div class="header__container">
+		<div class="header__logo">
 			<img src="assets/img/Logotype.svg" alt="World Trends Logo">
 		</div>
-		<nav class="header-menu">
-			<a href="charts.html" class="btn">Charts</a>
-			<a href="index.html" class="btn">News</a>
+		<nav class="header__menu">
+			<a href="charts.html" class="btn btn--primary">Charts</a>
+			<a href="index.html" class="btn btn--primary">News</a>
 		</nav>
 	</div>
 </header>
 
-<main class="content">
+<main>
+	<div id="monthGraphContainer">
+		<canvas id="monthGraph"></canvas>
+	</div>
+
+	<div id="monthData">
+		<div class="month-row" id="redData"></div>
+		<div class="month-row" id="blueData"></div>
+	</div>
+
+	<div id="monthSliderContainer">
+		<div id="monthSlider">
+			<span class="btn btn--arrow btn--dark" id="prevMonth"><img src="assets/img/IconArrowLeftWhite.svg" alt="arrow left"></span>
+			<div id="monthButtons"></div>
+			<span class="btn btn--arrow btn--dark" id="nextMonth"><img src="assets/img/IconArrowRightWhite.svg" alt="arrow right"></span>
+		</div>
+	</div>
+
+	<div id="chartContainer">
+		<canvas id="myChart"></canvas>
+	</div>
+
 
 </main>
 
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/chart.js"></script>
 </body>
 </html>
