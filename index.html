@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>World Trends</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header__container">
+			<div class="header__logo">
+				<img src="assets/img/Logotype.svg" alt="World Trends Logo">
+			</div>
+			<nav class="header__menu">
+				<a href="charts.html" class="btn">Charts</a>
+				<a href="index.html" class="btn">News</a>
+			</nav>
+		</div>
+	</header>
+	<main class="main-content">
+		<div class="news">
+		<article class="news__item">
+			<div class="news__image">
+				<img id="mainNewsImage" src="" alt="">
+			</div>
+			<div class="news-overlay">
+				<h1 class="news-title" id="mainNewsTitle"></h1>
+				<div class="news__actions">
+					<button class="btn btn--explore" id="exploreBtn">Explore</button>
+					<button class="btn btn--arrow">
+						<img src="assets/img/IconArrowRight.svg" alt="arrow right">
+					</button>
+				</div>
+			</div>
+		</article>
+		<div class="news__actions--mobile">
+			<button class="btn btn--explore" id="exploreBtnMobile">Explore</button>
+			<button class="btn btn--arrow">
+				<img src="assets/img/IconArrowRight.svg" alt="arrow right">
+			</button>
+		</div>
+		<aside class="news__featured" id="featuredNews"></aside>
+	</div>
+	<section class="news-section news-section--latest">
+		<h2 class="news-section__title">Latest News</h2>
+		<div class="news-section__list" id="newsContainer"></div>
+	</section>
+</main>
+<div id="newsModal" class="modal">
+	<div class="modal-content">
+		<span id="closeModal" class="close-btn">&times;</span>
+		<h2 id="modalTitle"></h2>
+		<img id="modalImage" src="" alt="news image" />
+		<p id="modalDescription"></p>
+		<p id="modalCategory"></p>
+		<p id="modalTime"></p>
+	</div>
+</div>
+
+<script src="js/featured-news.js"></script>
+<script src="js/latest-news.js"></script>
+<script src="js/modal.js"></script>
+</body>
+</html>
