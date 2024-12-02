@@ -175,6 +175,7 @@ body {
 
 .content-section {
     margin-top: 60px;
+    overflow: hidden;
 }
 
 
@@ -307,16 +308,12 @@ body {
 }
 
 canvas {
-    max-height: 300px;
-    min-height: 280px;
-    min-width: 580px;
-    overflow: hidden;
+    max-height: 250px;
 }
 
-
 #chartContainer {
+    min-width: 850px;
     height: 500px;
-    overflow: hidden;
 }
 
 #monthSlider {
@@ -347,4 +344,6 @@ canvas {
     overflow: hidden;
     width: 100%;
     justify-content: space-around;
+    gap: 10px;
+    padding: 10px;
 }
