@@ -1,4 +1,3 @@
-
 // Создание кнопок месяцев
 const today = new Date();
 const currentDay = today.getDate();
@@ -7,12 +6,13 @@ const months = [
 	'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
 ];
 const monthButtons = document.getElementById('monthButtons');
+const prevMonthButton = document.getElementById('prevMonth');
+const nextMonthButton = document.getElementById('nextMonth');
+let currentMonthIndex = today.getMonth();
 
+// Генерация кнопок месяцев
 function createMonthButtons() {
 	const totalButtons = 11;
-	let currentMonthIndex = today.getMonth();
-
-	// Генерация кнопок
 	for (let i = 0; i < totalButtons; i++) {
 		const monthIndex = (currentMonthIndex + i) % months.length;
 		const monthText = `${months[monthIndex]}, ${currentDay}`;
@@ -27,13 +27,13 @@ function createMonthButtons() {
 	monthButtons.children[0].classList.add('selected');
 }
 
+// Обработчик клика по месяцу
 function handleMonthSelect(button) {
 	// Снимаем выделение со всех кнопок
 	Array.from(monthButtons.children).forEach(btn => btn.classList.remove('selected'));
 	// Выделяем текущую кнопку
 	button.classList.add('selected');
 	// Можно обновить данные на графике или вывести их
-	console.log(`Selected month: ${button.textContent}`);
 	const selectedMonth = button.textContent.split(',')[0];
 	updateMonthData(selectedMonth);
 }
@@ -53,6 +53,29 @@ function updateMonthData(month) {
 }
 
 createMonthButtons();
+
+// Функции для прокрутки влево и вправо
+function scrollMonthSlider(direction) {
+	const firstMonthButton = monthButtons.children[0];
+	const lastMonthButton = monthButtons.children[monthButtons.children.length - 1];
+
+	if (direction === 'next') {
+		// Перемещаем первый элемент в конец
+		monthButtons.appendChild(firstMonthButton);
+	} else if (direction === 'prev') {
+		// Перемещаем последний элемент в начало
+		monthButtons.insertBefore(lastMonthButton, monthButtons.firstChild);
+	}
+}
+
+// Обработчики нажатия на стрелки
+prevMonthButton.addEventListener('click', () => {
+	scrollMonthSlider('prev');
+});
+
+nextMonthButton.addEventListener('click', () => {
+	scrollMonthSlider('next');
+});
 
 // Данные для графиков
 const dates = Array.from({ length: 31 }, (_, i) => `${i + 1} Aug`);

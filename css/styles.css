@@ -17,6 +17,7 @@ body {
     cursor: pointer;
     border: none;
     transition: opacity 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn--primary {
@@ -296,7 +297,7 @@ body {
         color: white;
     }
 
-    .btn--arrow img {
+    .invert {
         filter: invert(1);
     }
 
@@ -304,8 +305,18 @@ body {
         margin: 0;
     }
 }
+
 canvas {
     max-height: 300px;
+    min-height: 280px;
+    min-width: 580px;
+    overflow: hidden;
+}
+
+
+#chartContainer {
+    height: 500px;
+    overflow: hidden;
 }
 
 #monthSlider {
@@ -329,4 +340,11 @@ canvas {
 
 #blueData {
     color: #143e95;
+}
+
+#monthButtons {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-around;
 }
