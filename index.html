@@ -14,8 +14,8 @@
 				<img src="assets/img/Logotype.svg" alt="World Trends Logo">
 			</div>
 			<nav class="header__menu">
-				<a href="charts.html" class="btn">Charts</a>
-				<a href="index.html" class="btn">News</a>
+				<a href="charts.html" class="btn btn--primary">Charts</a>
+				<a href="index.html" class="btn btn--primary">News</a>
 			</nav>
 		</div>
 	</header>
@@ -28,7 +28,7 @@
 			<div class="news-overlay">
 				<h1 class="news-title" id="mainNewsTitle"></h1>
 				<div class="news__actions">
-					<button class="btn btn--explore" id="exploreBtn">Explore</button>
+					<button class="btn btn--primary" id="exploreBtn">Explore</button>
 					<button class="btn btn--arrow">
 						<img src="assets/img/IconArrowRight.svg" alt="arrow right">
 					</button>
@@ -36,14 +36,14 @@
 			</div>
 		</article>
 		<div class="news__actions--mobile">
-			<button class="btn btn--explore" id="exploreBtnMobile">Explore</button>
+			<button class="btn btn--dark" id="exploreBtnMobile">Explore</button>
 			<button class="btn btn--arrow">
 				<img src="assets/img/IconArrowRight.svg" alt="arrow right">
 			</button>
 		</div>
 		<aside class="news__featured" id="featuredNews"></aside>
 	</div>
-	<section class="news-section news-section--latest">
+	<section class="news-section content-section">
 		<h2 class="news-section__title">Latest News</h2>
 		<div class="news-section__list" id="newsContainer"></div>
 	</section>
@@ -51,11 +51,14 @@
 <div id="newsModal" class="modal">
 	<div class="modal-content">
 		<span id="closeModal" class="close-btn">&times;</span>
-		<h2 id="modalTitle"></h2>
-		<img id="modalImage" src="" alt="news image" />
-		<p id="modalDescription"></p>
-		<p id="modalCategory"></p>
-		<p id="modalTime"></p>
+		<div class="news-section__content">
+			<h2 id="modalTitle"></h2>
+			<img id="modalImage" src="" alt="news image" />
+			<p id="modalDescription"></p>
+			<div class="news-meta">
+				<p id="modalCategory"></p>
+			</div>
+		</div>
 	</div>
 </div>
 

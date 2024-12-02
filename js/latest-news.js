@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	const readMoreButton = document.createElement('button');
 	readMoreButton.textContent = 'Read More';
-	readMoreButton.classList.add('btn');
+	readMoreButton.classList.add('btn','btn--dark');
 	readMoreContainer.appendChild(readMoreButton);
 
 	const latestNewsSection = document.querySelector('.news-section');

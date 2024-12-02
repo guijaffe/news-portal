@@ -11,8 +11,6 @@ body {
 }
 
 .btn {
-    background-color: #ededed;
-    color: #595959;
     padding: 10px 17px;
     border-radius: 8px;
     font-size: 18px;
@@ -21,10 +19,19 @@ body {
     transition: opacity 0.3s ease;
 }
 
+.btn--primary {
+    background-color: #ededed;
+    color: #595959;
+}
+
+.btn--dark {
+    background-color: #191919;
+    color: #fff;
+}
+
 .btn:hover {
     outline: 1px solid black;
     opacity: 0.8;
-    color: black;
     cursor: pointer;
     outline-offset: -1px;
 }
@@ -165,9 +172,8 @@ body {
     text-overflow: ellipsis;
 }
 
-.news-section {
-    gap: 20px;
-    margin-top: 40px;
+.content-section {
+    margin-top: 60px;
 }
 
 
@@ -225,11 +231,10 @@ body {
     margin: auto;
     padding: 30px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
+    max-width: 700px;
     border-radius: 10px;
-    max-height: 100%;
-    overflow: scroll;
+    max-height: 80%;
+    overflow: auto;
     box-sizing: border-box;
 }
 
@@ -247,6 +252,11 @@ body {
     cursor: pointer;
 }
 
+.read-more-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
 
 @media (max-width: 1024px) {
     body {
@@ -280,11 +290,7 @@ body {
         margin: 5px 0 20px 0;
     }
 
-    .btn--explore {
-        background-color: black;
-        color: white;
-    }
-
+    .btn--dark,
     .btn--arrow {
         background-color: black;
         color: white;

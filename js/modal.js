@@ -4,14 +4,12 @@ const modalTitle = document.getElementById('modalTitle');
 const modalImage = document.getElementById('modalImage');
 const modalDescription = document.getElementById('modalDescription');
 const modalCategory = document.getElementById('modalCategory');
-const modalTime = document.getElementById('modalTime');
 
 function showModal(news) {
 	modalTitle.textContent = news.title;
 	modalImage.src = news.img;
 	modalDescription.textContent = news.description;
 	modalCategory.textContent = `Category: ${news.category}`;
-	modalTime.textContent = getRandomTime();
 
 	modal.style.display = 'block';
 }
