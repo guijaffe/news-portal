@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			meta: '4 hrs ago | Asia'
 		},
 		{
-			image: '/assets/news/tupac-shakur.jpg',
-			title: 'Integer pretium nunc sed turpis...',
-			description: 'Morbi bibendum eu diam at viverra. Fusce consequat auctor nisi sit amet gravida...',
-			meta: '4 hrs ago | Asia'
+			image: '/assets/news/good-boy.jpg',
+			title: 'Look at This Good Boy!',
+			description:
+				'Isn\'t he just the best boy ever? Look at that adorable face! He\'s always ready to brighten your day with his wagging tail and those puppy eyes that can melt even the hardest of hearts. Whether he\'s stealing socks, chasing his tail, or just snuggling up on the couch, this good boy is guaranteed to bring smiles and laughter wherever he goes. Truly, life is better with dogs like him around!',
+			meta: '4 hrs ago | Good boy'
 		},
 		{
 			image: '/assets/news/tupac-shakur.jpg',
@@ -32,10 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			meta: '4 hrs ago | Asia'
 		},
 		{
-			image: '/assets/news/tupac-shakur.jpg',
-			title: 'Integer pretium nunc sed turpis...',
-			description: 'Morbi bibendum eu diam at viverra. Fusce consequat auctor nisi sit amet gravida...',
-			meta: '4 hrs ago | Asia'
+			image: '/assets/news/good-boy.jpg',
+			title: 'Look at This Good Boy!',
+			description:
+				'Isn\'t he just the best boy ever? Look at that adorable face! He\'s always ready to brighten your day with his wagging tail and those puppy eyes that can melt even the hardest of hearts. Whether he\'s stealing socks, chasing his tail, or just snuggling up on the couch, this good boy is guaranteed to bring smiles and laughter wherever he goes. Truly, life is better with dogs like him around!',
+			meta: '4 hrs ago | Good boy'
 		},
 		{
 			image: '/assets/news/tupac-shakur.jpg',
@@ -44,10 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			meta: '4 hrs ago | Asia'
 		},
 		{
-			image: '/assets/news/tupac-shakur.jpg',
-			title: 'Integer pretium nunc sed turpis...',
-			description: 'Morbi bibendum eu diam at viverra. Fusce consequat auctor nisi sit amet gravida...',
-			meta: '4 hrs ago | Asia'
+			image: '/assets/news/good-boy.jpg',
+			title: 'Look at This Good Boy!',
+			description:
+				'Isn\'t he just the best boy ever? Look at that adorable face! He\'s always ready to brighten your day with his wagging tail and those puppy eyes that can melt even the hardest of hearts. Whether he\'s stealing socks, chasing his tail, or just snuggling up on the couch, this good boy is guaranteed to bring smiles and laughter wherever he goes. Truly, life is better with dogs like him around!',
+			meta: '4 hrs ago | Good boy'
 		},
 		{
 			image: '/assets/news/tupac-shakur.jpg',
@@ -56,10 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			meta: '4 hrs ago | Asia'
 		},
 		{
-			image: '/assets/news/tupac-shakur.jpg',
-			title: 'Integer pretium nunc sed turpis...',
-			description: 'Morbi bibendum eu diam at viverra. Fusce consequat auctor nisi sit amet gravida...',
-			meta: '4 hrs ago | Asia'
+			image: '/assets/news/good-boy.jpg',
+			title: 'Look at This Good Boy!',
+			description:
+				'Isn\'t he just the best boy ever? Look at that adorable face! He\'s always ready to brighten your day with his wagging tail and those puppy eyes that can melt even the hardest of hearts. Whether he\'s stealing socks, chasing his tail, or just snuggling up on the couch, this good boy is guaranteed to bring smiles and laughter wherever he goes. Truly, life is better with dogs like him around!',
+			meta: '4 hrs ago | Good boy'
 		},
 	];
 

@@ -9,9 +9,8 @@ const monthButtons = document.getElementById('monthButtons');
 const prevMonthButton = document.getElementById('prevMonth');
 const nextMonthButton = document.getElementById('nextMonth');
 
-const monthlyRedData = Array.from({ length: 12 }, () => (Math.random() * 100).toFixed(2));
-const monthlyBlueData = Array.from({ length: 12 }, () => (Math.random() * 100).toFixed(2));
-
+const monthlyRedData = Array.from({ length: 12 }, () => Math.round(Math.random() * 1000));
+const monthlyBlueData = Array.from({ length: 12 }, () => Math.round(Math.random() * 1000));
 function createMonthButtons() {
 	const totalButtons = 11;
 
@@ -53,16 +52,16 @@ function updateMonthData(month) {
     `;
 }
 
-// --- Прокрутка кнопок месяцев ---
 function scrollMonthSlider(direction) {
-	if (direction === 'next') {
-		monthButtons.appendChild(monthButtons.children[0]);
-	} else if (direction === 'prev') {
-		monthButtons.insertBefore(monthButtons.children[monthButtons.children.length - 1], monthButtons.firstChild);
+	setTimeout(() => {
+		if (direction === 'next') {
+			monthButtons.appendChild(monthButtons.children[0]);
+		} else if (direction === 'prev') {
+			monthButtons.insertBefore(monthButtons.children[monthButtons.children.length - 1], monthButtons.firstChild);
+		}
 	}
-}
+)}
 
-// --- Обработчики событий для прокрутки ---
 prevMonthButton.addEventListener('click', () => scrollMonthSlider('prev'));
 nextMonthButton.addEventListener('click', () => scrollMonthSlider('next'));
 
@@ -128,12 +127,11 @@ const chart = new Chart(ctx, {
 						return tooltipItem.chart.data.datasets[datasetIndex].borderColor;
 					}
 					return '#000';
-				}
+				},
+				displayColors: false,
 			},
 			legend: {
-				labels: {
-					display: false,
-				},
+				display: false,
 			},
 		},
 		scales: {

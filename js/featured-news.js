@@ -39,7 +39,6 @@ const featuredNews = [
 	},
 ];
 
-// Utility function for generating random time
 const getRandomTime = () => `${Math.floor(Math.random() * 12) + 1} hr ago`;
 
 let mainNews = null;
@@ -49,21 +48,28 @@ const featuredNewsContainer = document.getElementById("featuredNews");
 const mainNewsTitle = document.getElementById("mainNewsTitle");
 const mainNewsImage = document.getElementById("mainNewsImage");
 
-// Updates main news section
 function updateMainNews(news) {
 	mainNews = news;
-	mainNewsTitle.textContent = news.title;
-	mainNewsImage.src = news.img;
-	mainNewsImage.alt = news.title;
+
+	mainNewsImage.classList.add("fade-out");
+
+	setTimeout(() => {
+		mainNewsTitle.textContent = news.title;
+		mainNewsImage.src = news.img;
+		mainNewsImage.alt = news.title;
+
+		setTimeout(() => {
+			mainNewsImage.classList.remove("fade-out");
+		}, 50);
+	}, 400);
 }
 
-// Displays featured news (4 items)
 function displayFeaturedNews() {
 	const randomNews = featuredNews.filter(news => news !== mainNews);
 
 	const shuffledNews = randomNews.sort(() => Math.random() - 0.5).slice(0, 4);
 
-	featuredNewsContainer.innerHTML = ""; // Clear old news
+	featuredNewsContainer.innerHTML = "";
 
 	shuffledNews.forEach(news => {
 		const newsItem = document.createElement("div");
@@ -75,7 +81,6 @@ function displayFeaturedNews() {
 			<span class="news-meta">${time} | ${news.category}</span>
 		`;
 
-		// Attach click handler
 		newsItem.addEventListener("click", () => {
 			updateMainNews(news);
 			resetAutoChangeTimer();
@@ -86,7 +91,6 @@ function displayFeaturedNews() {
 	});
 }
 
-// Initializes main news with a random entry
 function initializeMainNews() {
 	const randomIndex = Math.floor(Math.random() * featuredNews.length);
 	const initialNews = featuredNews[randomIndex];
@@ -95,7 +99,6 @@ function initializeMainNews() {
 	displayFeaturedNews();
 }
 
-// Changes main news automatically every 10 seconds
 function autoChangeMainNews() {
 	autoChangeTimer = setInterval(() => {
 		const randomIndex = Math.floor(Math.random() * featuredNews.length);
@@ -108,12 +111,10 @@ function autoChangeMainNews() {
 	}, 10000);
 }
 
-// Resets the auto-change timer
 function resetAutoChangeTimer() {
 	clearInterval(autoChangeTimer);
 	autoChangeMainNews();
 }
 
-// Initialize everything
 initializeMainNews();
 autoChangeMainNews();

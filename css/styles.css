@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 a {
@@ -315,6 +315,10 @@ canvas {
     min-width: 850px;
     height: 500px;
 }
+#chartContainer span {
+    font-size: 12px;
+    padding: 4px;
+}
 
 #monthSlider {
     display: flex;
@@ -348,3 +352,11 @@ canvas {
     margin: 8px;
 }
 
+.news__image img {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.news__image img.fade-out {
+    opacity: 0;
+}
