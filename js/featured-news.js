@@ -23,7 +23,7 @@ const featuredNews = [
 		title: "Lorem ipsum dolor sit amet",
 		description:
 			"Nulla ornare velit vel faucibus porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut dui lectus, vestibulum a odio sed, imperdiet porttitor elit. Quisque ut enim mauris. Morbi in iaculis turpis. Aenean vel eros sagittis, sollicitudin enim auctor, euismod lacus. Aliquam accumsan ut neque in feugiat. Sed pulvinar ipsum quam, posuere finibus velit tincidunt in. Cras eleifend nulla magna, vitae imperdiet elit semper et. Nullam quis feugiat diam. Vivamus facilisis est non condimentum ultrices. Cras mattis sem a mauris fermentum, vel egestas ex pharetra. Aenean lectus mauris, consequat a ornare at, sagittis id urna. Pellentesque nibh lorem, lacinia vestibulum interdum sed, molestie a ante. Mauris porttitor dui a tincidunt ultricies. Morbi vel lacinia sem.",
-		img: "/assets/news/lorem.jpg",
+		img: "assets/news/lorem.jpg",
 		category: "Lifestyle",
 	},
 	{
