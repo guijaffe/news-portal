@@ -8,11 +8,13 @@ const modalCategory = document.getElementById('modalCategory');
 function showModal(news) {
 	modalTitle.textContent = news.title;
 	modalImage.src = news.img;
+	modalImage.alt = news.description; // Устанавливаем alt равным description
 	modalDescription.textContent = news.description;
 	modalCategory.textContent = `Category: ${news.category}`;
 
 	modal.style.display = 'block';
 }
+
 
 closeModal.addEventListener('click', () => {
 	modal.style.display = 'none';

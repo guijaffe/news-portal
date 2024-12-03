@@ -13,7 +13,7 @@
 			<div class="header__logo">
 				<img src="assets/img/Logotype.svg" alt="World Trends Logo">
 			</div>
-			<nav class="header__menu">
+			<nav class="header__menu" role="navigation" aria-label="Main menu">
 				<a href="charts.html" class="btn btn--primary">Charts</a>
 				<a href="index.html" class="btn btn--primary">News</a>
 			</nav>
@@ -28,18 +28,18 @@
 			<div class="news-overlay">
 				<h1 class="news-title" id="mainNewsTitle"></h1>
 				<div class="news__actions">
-					<button class="btn btn--primary" id="exploreBtn">Explore</button>
-					<button class="btn btn--arrow">
+					<button class="btn btn--primary" id="exploreBtn" title="View full description">Explore</button>
+					<a href="#" class="btn btn--arrow btn--primary" aria-label="Read the full news">
 						<img src="assets/img/IconArrowRight.svg" alt="arrow right">
-					</button>
+					</a>
 				</div>
 			</div>
 		</article>
 		<div class="news__actions--mobile">
-			<button class="btn btn--dark" id="exploreBtnMobile">Explore</button>
-			<button class="btn btn--arrow">
+			<button class="btn btn--dark" id="exploreBtnMobile" title="View full description">Explore</button>
+			<a href="#" class="btn btn--arrow" id="newsLink" aria-label="Read the full news">
 				<img class="invert" src="assets/img/IconArrowRight.svg" alt="arrow right">
-			</button>
+			</a>
 		</div>
 		<aside class="news__featured" id="featuredNews"></aside>
 	</div>
