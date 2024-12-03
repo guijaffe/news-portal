@@ -1,7 +1,7 @@
 Общая продолжительность работы:
 Выполнено за 6-7 часов.
 
-Тестирование в браузерах: Google Chrome, Safari, Firefox,
+Тестирование в браузерах: Google Chrome, Safari, Firefox, Opera, Edge
 На всякий случай проверил mac и на windows)
 Всё ок
 
