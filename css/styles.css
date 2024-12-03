@@ -30,6 +30,12 @@ body {
     color: #fff;
 }
 
+
+.btn--active {
+    outline: 1px solid black;
+    outline-offset: -1px;
+}
+
 .btn:hover {
     outline: 1px solid black;
     opacity: 0.8;
@@ -314,6 +320,7 @@ canvas {
 #chartContainer {
     min-width: 850px;
     height: 500px;
+    user-select: none;
 }
 #chartContainer span {
     font-size: 12px;

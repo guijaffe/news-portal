@@ -12,7 +12,7 @@ const nextMonthButton = document.getElementById('nextMonth');
 const monthlyRedData = Array.from({ length: 12 }, () => Math.round(Math.random() * 1000));
 const monthlyBlueData = Array.from({ length: 12 }, () => Math.round(Math.random() * 1000));
 function createMonthButtons() {
-	const totalButtons = 11;
+	const totalButtons = 12;
 
 	for (let i = 0; i < totalButtons; i++) {
 		const monthIndex = (currentMonthIndex + i) % months.length;
@@ -25,14 +25,12 @@ function createMonthButtons() {
 
 		monthButtons.appendChild(button);
 	}
-
-	monthButtons.children[0].classList.add('selected');
 }
 
 function handleMonthSelect(button) {
-	Array.from(monthButtons.children).forEach(btn => btn.classList.remove('selected'));
+	Array.from(monthButtons.children).forEach(btn => btn.classList.remove('btn--active'));
 
-	button.classList.add('selected');
+	button.classList.add('btn--active');
 
 	const selectedMonth = button.textContent.split(',')[0];
 	updateMonthData(selectedMonth);

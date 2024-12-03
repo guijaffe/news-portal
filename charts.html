@@ -14,27 +14,30 @@
 			<img src="assets/img/Logotype.svg" alt="World Trends Logo">
 		</div>
 		<nav class="header__menu" role="navigation" aria-label="Main menu">
-			<a href="charts.html" class="btn btn--primary">Charts</a>
-			<a href="index.html" class="btn btn--primary">News</a>
+			<a href="charts.html" class="btn btn--primary btn--active" aria-label="Charts page">Charts</a>
+			<a href="index.html" class="btn btn--primary" aria-label="News page">News</a>
 		</nav>
 	</div>
 </header>
 <main class="content-section">
 	<h2>Charts</h2>
 	<div id="monthData">
-		<div class="month-row" id="redData"></div>
-		<div class="month-row" id="blueData"></div>
+		<div class="month-row" id="redData" aria-label="Red data trend for the month"></div>
+		<div class="month-row" id="blueData" aria-label="Blue data trend for the month"></div>
 	</div>
 	<div id="monthSliderContainer">
-		<div id="monthSlider" aria-label="Month navigation">
-			<span class="btn btn--arrow btn--dark" id="prevMonth" aria-label="previous month"><img src="assets/img/IconArrowLeftWhite.svg" alt="arrow left"></span>
-			<div id="monthButtons"></div>
-			<span class="btn btn--arrow btn--dark" id="nextMonth" aria-label="next month"><img src="assets/img/IconArrowRightWhite.svg" alt="arrow right"></span>
+		<div id="monthSlider" aria-label="Month navigation" role="region">
+			<span class="btn btn--arrow btn--dark" id="prevMonth" aria-label="Previous month" role="button" tabindex="0">
+				<img src="assets/img/IconArrowLeftWhite.svg" alt="arrow left">
+			</span>
+			<div id="monthButtons" aria-live="polite"></div>
+			<span class="btn btn--arrow btn--dark" id="nextMonth" aria-label="Next month" role="button" tabindex="0">
+				<img src="assets/img/IconArrowRightWhite.svg" alt="arrow right">
+			</span>
 		</div>
 	</div>
 	<div id="chartContainer">
-		<span>TB</span>
-		<canvas id="myChart" aria-label="Monthly Data Trends" role="img"></canvas>
+		<canvas id="myChart" aria-label="Graph displaying monthly data trends for cloud storage"></canvas>
 	</div>
 </main>
 

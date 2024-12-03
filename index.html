@@ -8,27 +8,27 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<header class="header">
-		<div class="header__container">
-			<div class="header__logo">
-				<img src="assets/img/Logotype.svg" alt="World Trends Logo">
-			</div>
-			<nav class="header__menu" role="navigation" aria-label="Main menu">
-				<a href="charts.html" class="btn btn--primary">Charts</a>
-				<a href="index.html" class="btn btn--primary">News</a>
-			</nav>
+<header class="header">
+	<div class="header__container">
+		<div class="header__logo">
+			<img src="assets/img/Logotype.svg" alt="World Trends Logo">
 		</div>
-	</header>
-	<main class="main-content">
-		<div class="news">
+		<nav class="header__menu" role="navigation" aria-label="Main menu">
+			<a href="charts.html" class="btn btn--primary" aria-label="Charts page">Charts</a>
+			<a href="index.html" class="btn btn--primary btn--active" aria-label="News page">News</a>
+		</nav>
+	</div>
+</header>
+<main class="main-content">
+	<div class="news">
 		<article class="news__item">
 			<div class="news__image">
-				<img id="mainNewsImage" src="" alt="">
+				<img id="mainNewsImage" src="" alt="Main news image" aria-describedby="mainNewsTitle">
 			</div>
 			<div class="news-overlay">
-				<h1 class="news-title" id="mainNewsTitle"></h1>
+				<h1 class="news-title" id="mainNewsTitle">Main News Title</h1>
 				<div class="news__actions">
-					<button class="btn btn--primary" id="exploreBtn" title="View full description">Explore</button>
+					<button class="btn btn--primary" id="exploreBtn" title="View full description" aria-label="View full description of the news">Explore</button>
 					<a href="#" class="btn btn--arrow btn--primary" aria-label="Read the full news">
 						<img src="assets/img/IconArrowRight.svg" alt="arrow right">
 					</a>
@@ -36,27 +36,29 @@
 			</div>
 		</article>
 		<div class="news__actions--mobile">
-			<button class="btn btn--dark" id="exploreBtnMobile" title="View full description">Explore</button>
+			<button class="btn btn--dark" id="exploreBtnMobile" title="View full description" aria-label="View full description of the news">Explore</button>
 			<a href="#" class="btn btn--arrow" id="newsLink" aria-label="Read the full news">
 				<img class="invert" src="assets/img/IconArrowRight.svg" alt="arrow right">
 			</a>
 		</div>
-		<aside class="news__featured" id="featuredNews"></aside>
+		<aside class="news__featured" id="featuredNews" aria-labelledby="featuredNewsTitle">
+			<h3 id="featuredNewsTitle" class="visually-hidden">Featured News</h3>
+		</aside>
 	</div>
-	<section class="news-section content-section">
-		<h2 class="news-section__title">Latest News</h2>
+	<section class="news-section content-section" aria-labelledby="latestNewsTitle">
+		<h2 class="news-section__title" id="latestNewsTitle">Latest News</h2>
 		<div class="news-section__list" id="newsContainer"></div>
 	</section>
 </main>
-<div id="newsModal" class="modal">
+<div id="newsModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
 	<div class="modal-content">
-		<span id="closeModal" class="close-btn">&times;</span>
+		<button id="closeModal" class="close-btn" aria-label="Close modal" aria-controls="newsModal">&times;</button>
 		<div class="news-section__content">
-			<h2 id="modalTitle"></h2>
-			<img id="modalImage" src="" alt="news image" />
-			<p id="modalDescription"></p>
+			<h2 id="modalTitle">News Title</h2>
+			<img id="modalImage" src="" alt="News image" />
+			<p id="modalDescription">News description goes here.</p>
 			<div class="news-meta">
-				<p id="modalCategory"></p>
+				<p id="modalCategory">Category</p>
 			</div>
 		</div>
 	</div>
